@@ -18,19 +18,19 @@ while (index_queue < queue_links.length) && (test < 1000)
 		
 	  all_links = doc.xpath("//article//a")
 	  
-	all_links.each do |l|
-		link = "https://www.thesun.co.uk#{l["href"]}".gsub(/\?.*$/, "")
-		if link.match(/https:\/\/www.thesun.co.uk\/news/) != nil
-			if !(queue_links.include? link)
-			  queue_links.push link
-			end
-	  end
-	end
+		all_links.each do |l|
+			link = "https://www.thesun.co.uk#{l["href"]}".gsub(/\?.*$/, "")
+			if link.match(/https:\/\/www.thesun.co.uk\/news/) != nil
+				if !(queue_links.include? link)
+				  queue_links.push link
+				end
+		  end
+		end
 
-	# puts queue_links.length
+		# puts queue_links.length
 
-	puts "++++++++++++++++++++++++++++++++++++++"
-	# puts queue_links
+		puts "++++++++++++++++++++++++++++++++++++++"
+		# puts queue_links
 
 		doc.css("header.article__header").remove
 		doc.css("div.article__meta").remove
@@ -54,9 +54,9 @@ while (index_queue < queue_links.length) && (test < 1000)
 
 	  title = doc.xpath("//article//p")[1]
 	  file_output.puts title.text
-  	file_output.puts ""
+		file_output.puts ""
 
-  	title.remove
+		title.remove
 
 	  file_output.puts tmp    
 	  file_output.puts ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

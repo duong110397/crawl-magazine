@@ -31,37 +31,37 @@ while (index_queue < queue_links.length) && (test < 1000)
 
     puts "++++++++++++++++++++++++++++++++++++++"
 
-		  doc.css("div.billboard_wrapper").remove
-		  doc.search("//html//script").remove
-		  doc.css("div#articleIconLinksContainer").remove
-		  doc.css("ul.mol-bullets-with-font").remove
-		  doc.css("p.author-section").remove
-		  doc.css("p.byline-section").remove
-		  doc.css("span.mol-style-bold").remove
-		  doc.css("p.imageCaption").remove
-		  doc.css("div#p-19").remove
-		  doc.css("div#p-23").remove
-		  doc.css("div.adHolder").remove
-		  doc.css("div#taboola-below-main-column").remove
-		  doc.css("div#most-watched-videos-wrapper").remove
-		  doc.css("div.column-content").remove
-		  doc.css("div#most-read-news-wrapper").remove
-		  doc.css("div#reader-comments").remove
-		  doc.css("div#external-source-links").remove
+	  doc.css("div.billboard_wrapper").remove
+	  doc.search("//html//script").remove
+	  doc.css("div#articleIconLinksContainer").remove
+	  doc.css("ul.mol-bullets-with-font").remove
+	  doc.css("p.author-section").remove
+	  doc.css("p.byline-section").remove
+	  doc.css("span.mol-style-bold").remove
+	  doc.css("p.imageCaption").remove
+	  doc.css("div#p-19").remove
+	  doc.css("div#p-23").remove
+	  doc.css("div.adHolder").remove
+	  doc.css("div#taboola-below-main-column").remove
+	  doc.css("div#most-watched-videos-wrapper").remove
+	  doc.css("div.column-content").remove
+	  doc.css("div#most-read-news-wrapper").remove
+	  doc.css("div#reader-comments").remove
+	  doc.css("div#external-source-links").remove
 
-		  file_output = File.open("data/dailymail#{index_queue}.txt", "w")
+	  file_output = File.open("data/dailymail#{index_queue}.txt", "w")
 
-		  title = doc.xpath("//body//h2")[0]
-		  file_output.puts title.text
-      file_output.puts ""
+	  title = doc.xpath("//body//h2")[0]
+	  file_output.puts title.text
+    file_output.puts ""
 
-      title.remove
+    title.remove
 
-			tmp = doc.css('div#js-article-text').text.gsub("\n", "").gsub(/<.*?>/, " ").strip.squeeze
+		tmp = doc.css('div#js-article-text').text.gsub("\n", "").gsub(/<.*?>/, " ").strip.squeeze
 
-		  file_output.puts tmp    
-		  file_output.puts ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-		  file_output.write queue_links[index_queue]
+	  file_output.puts tmp    
+	  file_output.puts ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+	  file_output.write queue_links[index_queue]
 
 
 	rescue Exception => e
