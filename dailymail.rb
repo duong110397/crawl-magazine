@@ -28,7 +28,7 @@ while (index_queue < queue_links.length) && (test < 1000)
     end
 
     puts queue_links[index_queue]
-
+ 
     puts "++++++++++++++++++++++++++++++++++++++"
 
 	  doc.css("div.billboard_wrapper").remove
